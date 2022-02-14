@@ -9,7 +9,6 @@ Suite Setup  Run Keywords  Valid Login
 ...         Categories And Select Apple Prodocts
 Suite Teardown  Close Browser
 
-
 ***Test Cases***
 Verfy Buying product on the Digikala
     Buying Products 

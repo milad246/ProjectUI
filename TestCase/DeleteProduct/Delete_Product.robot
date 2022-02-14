@@ -10,8 +10,6 @@ Suite Setup  Run Keywords  Valid Login
 # ...          Buying Products         
 Suite Teardown  Close Browser
 
-***Variables***
-
 ***Test Cases***
 Verify Delet Product from the cart
     Select Cart
