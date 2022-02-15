@@ -4,13 +4,13 @@ Library  SeleniumLibrary
 Resource  ../../Resource/Common.robot
 Resource  ../../Resource/Variables.robot
 Force Tags  Buying Magazine
-Test Setup  Run Keywords  Select PopUp Categories And Book Magazine
+Test Setup  Select PopUp Categories And Book Magazine
 Suite Teardown  Close All Browsers
 Test Template  Buying Magazine
 
 ***Test Cases***          type                   product              checkBox_Paper             verifytype
 Buying Magazine Internal  ${Internal_Magazines}  ${Internal_Product}  ${Click_Paper_CoverIntr}  ${Verify_TypeIntr}      
-Buying Magazine External  ${External_Magazines}  ${External_Product}  ${Click_Paper_Cover}       ${Verify_Type}  
+Buying Magazine External  ${External_Magazines}  ${External_Product}  ${Click_Paper_Cover}      ${Verify_Type}  
 
 ***Keywords***
 Buying Magazine
