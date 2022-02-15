@@ -14,7 +14,7 @@ Buying Magazine External  ${External_Magazines}  ${External_Product}  ${Click_Pa
 
 ***Keywords***
 Buying Magazine
-    [Arguments]  ${type}  ${product}  ${type_cover_mag}  ${checkBox_cover}  ${verifytype} 
+    [Arguments]  ${type}  ${product}  ${checkBox_cover}  ${verifytype} 
     Run Keyword And Ignore Error  Mouse Down  ${type}
     Click Element  ${type}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Cover}
