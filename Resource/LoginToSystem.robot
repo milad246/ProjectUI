@@ -4,13 +4,13 @@ Library  SeleniumLibrary
 Resource  Variables.robot
 
 ***Variables***
-${Login_button}  //div[@id='base_layout_desktop_fixed_header']/header/div/div/div/div[2]/a/div[2]
-${Input_username}  name:username
+${Login_button}  //*[contains(text(), 'ورود | ثبت‌نام')]
+${Input_username}  //*[@id="__next"]/main/div[2]/form/label/div/div/input
 ${username}  milad.hajizadehh@gmail.com
-${username_btn}  css:.relative:nth-child(2)
+${username_btn}  //div[contains(text(), 'ورود')]
 ${Input_password}  //*[@id="__next"]/main/div[2]/form/label/div/div[1]/input
 ${password}  Milad123456789
-${password_btn}  css:.text-button-1 > .relative
+${password_btn}  //div[contains(text(), 'تایید')]
 ${chek_login_button}  css:.BaseLayoutMiniProfile_BaseLayoutMiniProfile__profileButton__TwPY7 > .d-flex:nth-child(2) > svg 
 ${login_name}  Milad Hajizadeh
 
@@ -20,6 +20,7 @@ Open Page
     Set Selenium Timeout  ${TIMEOUT}
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
+    Wait Until Element Is Enabled  ${Login_button}
     Click Element  ${Login_button}
 
 Username Page
