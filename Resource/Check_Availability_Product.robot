@@ -17,7 +17,6 @@ Move Page
   Wait Until Page Contains  اپل  
 
 Click Next
-  Wait Until Element Is Enabled  ${Second_Page}
   Run Keyword And Ignore Error  Scroll Element Into View  ${Second_Page}
   Wait Until Element Is Visible  ${Second_Page}
   ${unavailable_el}=  get webelement  ${Unavailable}

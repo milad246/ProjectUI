@@ -18,7 +18,7 @@ ${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
 ***Keywords***
 Select Seller
     Set Selenium Speed  ${SPEED}
-    Set Selenium Timeout  ${TIMEOUT}.
+    Set Selenium Timeout  ${TIMEOUT}
     Wait Until Element Is Enabled  ${Type_Seller}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Type_Seller}
     Click Element  ${Type_Seller}
