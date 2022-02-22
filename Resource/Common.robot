@@ -22,14 +22,17 @@ Select Product Category
 
 Select Books and Magazines
     Wait Until Element Is Enabled  ${Select_Book_Magazin} 
+    Set Focus To Element  ${Select_Book_Magazin} 
     Mouse Over  ${Select_Book_Magazin}
     Click Element  ${Select_Book_Magazin}
 
 Select Categories Book Magazing
-    Wait Until Element Is Enabled   ${Select_Magazin_Map}   
+    Wait Until Element Is Enabled   ${Select_Magazin_Map}  
+    Set Focus To Element  ${Select_Magazin_Map}   
     Run Keyword And Ignore Error  Mouse Over  ${Select_Magazin_Map}  
     Click Element  ${Select_Magazin_Map}  
     Wait Until Element Is Visible  ${Magazine}
+    Set Focus To Element  ${Magazine} 
     Run Keyword And Ignore Error  Mouse Over   ${Magazine} 
     Click Element  ${Magazine} 
     

@@ -24,17 +24,21 @@ Buying Magazine External  ${External_Magazines}  ${External_Product}
 Buying Magazine
     [Arguments]  ${type}  ${product} 
     Wait Until Element Is Enabled  ${type} 
+    Set Focus To Element  ${type} 
     Run Keyword And Ignore Error  Mouse Over  ${type}
     Click Element  ${type}
     Wait Until Element Is Enabled  ${Filter_Cover}
+    Set Focus To Element  ${Filter_Cover}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Cover}
+    Set Focus To Element  ${Filter_Cover}
     Run Keyword And Ignore Error  Mouse Over  ${Filter_Cover}
     Click Element  ${Filter_Cover}
-    Wait Until Element Is Enabled  ${Filter_Type_Cover}
+    Set Focus To Element  ${Filter_Type_Cover}
     Run Keyword And Ignore Error  Mouse Over  ${Filter_Type_Cover}
     Click Element  ${Filter_Type_Cover}
     Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Filter_Type_Cover}
     Wait Until Element Is Enabled  ${product}
+    Set Focus To Element  ${product}
     Run Keyword And Ignore Error  Mouse Over  ${product}
     Click Image  ${product}
     Switch Window  NEW
