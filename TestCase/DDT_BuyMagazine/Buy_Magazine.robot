@@ -23,7 +23,7 @@ Buying Magazine External  ${External_Magazines}  ${External_Product}
 ***Keywords***
 Buying Magazine
     [Arguments]  ${type}  ${product} 
-    Wait Until Element Is Enabled  ${type} 
+    wait until element is visible  ${type} 
     Set Focus To Element  ${type} 
     Run Keyword And Ignore Error  Mouse Down  ${type}
     Click Element  ${type}

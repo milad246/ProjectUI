@@ -18,6 +18,7 @@ Open Page
 
 Select Product Category
     Wait Until Element Is Enabled  ${POPUP_CATEGORIES} 
+    Set Focus To Element  ${POPUP_CATEGORIES} 
     Mouse Over  ${POPUP_CATEGORIES}
 
 Select Books and Magazines
@@ -27,13 +28,14 @@ Select Books and Magazines
     Click Element  ${Select_Book_Magazin}
 
 Select Categories Book Magazing
-    Wait Until Element Is Enabled   ${Select_Magazin_Map}  
-    Set Focus To Element  ${Select_Magazin_Map}   
-    Run Keyword And Ignore Error  Mouse Down  ${Select_Magazin_Map}  
-    Click Element  ${Select_Magazin_Map}  
+    Wait Until Element Is Enabled  ${Select_Magazin_Map}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Select_Magazin_Map}
+    Wait Until Element Is Visible  ${Select_Magazin_Map}
+    Run Keyword And Ignore Error  Mouse Down  ${Select_Magazin_Map}
+    Run Keyword And Ignore Error  Mouse Up  ${Select_Magazin_Map}
     Wait Until Element Is Visible  ${Magazine}
-    Set Focus To Element  ${Magazine} 
-    Run Keyword And Ignore Error  Mouse Down  ${Magazine} 
+    Set Focus To Element  ${Magazine}
+    Mouse Over  ${Magazine}   
     Click Element  ${Magazine} 
     
 Select PopUp Categories And Book Magazine
