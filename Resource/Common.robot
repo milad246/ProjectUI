@@ -30,11 +30,11 @@ Select Categories Book Magazing
     Wait Until Element Is Enabled   ${Select_Magazin_Map}  
     Set Focus To Element  ${Select_Magazin_Map}   
     Run Keyword And Ignore Error  Mouse Down  ${Select_Magazin_Map}  
-    Run Keyword And Ignore Error  Mouse Up  ${Select_Magazin_Map}  
+    Click Element  ${Select_Magazin_Map}  
     Wait Until Element Is Visible  ${Magazine}
     Set Focus To Element  ${Magazine} 
-    Run Keyword And Ignore Error  Mouse Down  ${Select_Magazin_Map}  
-    Run Keyword And Ignore Error  Mouse Up  ${Select_Magazin_Map} 
+    Run Keyword And Ignore Error  Mouse Down  ${Magazine} 
+    Click Element  ${Magazine} 
     
 Select PopUp Categories And Book Magazine
     Open Page
