@@ -21,37 +21,48 @@ Select Seller
     Set Selenium Timeout  ${TIMEOUT}
     Wait Until Element Is Enabled  ${Type_Seller}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Type_Seller}
+    Wait Until Element Is Visible  ${Type_Seller}
     Click Element  ${Type_Seller}
-    Wait Until Element Is Enabled  ${Select_Seller}   
-    Run Keyword And Ignore Error  Mouse Down  ${Select_Seller}  
+    Wait Until Element Is Enabled  ${Select_Seller}  
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Select_Seller} 
+    Wait Until Element Is Visible  ${Select_Seller}     
+    Set Focus To Element  ${Select_Seller}  
     Click Element  ${Select_Seller} 
     Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Select_Seller}  
 
 Select Brand
     Wait Until Element Is Enabled  ${Filter_Brand} 
-    Run Keyword And Ignore Error  Mouse Over  ${Filter_Brand}  
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Brand} 
+    Wait Until Element Is Visible  ${Filter_Brand}  
     Click Element  ${Filter_Brand}
     Wait Until Element Is Enabled  ${Filter_Select_Brand} 
-    Run Keyword And Ignore Error  Mouse Over  ${Filter_Select_Brand}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand} 
+    Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
     Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Filter_Select_Brand}
  
 Product Selection
     Wait Until Element Is Enabled  ${Text_Product}
-    Run Keyword And Ignore Error  Mouse Over  ${Text_Product}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Text_Product}
+    Wait Until Element Is Visible  ${Text_Product}    
+    Set Focus To Element  ${Text_Product}
     Click Element  ${Text_Product}
     
 Add to cart  
     Switch Window  NEW
-    Wait Until Element Is Enabled  ${Text_Product}  
-    Run Keyword And Ignore Error  Mouse Over  ${Buy_Btn}
-    Click Button  ${Buy_Btn} 
-    Wait Until Element Is Enabled  ${Cart_Btn} 
-    Run Keyword And Ignore Error  Mouse Over  ${Cart_Btn}
-    Click Element  ${Cart_Btn}
-  
+    Wait Until Element Is Enabled  ${Text_Product} 
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Buy_Btn}
+    Wait Until Element Is Visible  ${Buy_Btn}   
+    Set Focus To Element  ${Buy_Btn}
+    Click Element  ${Buy_Btn}
+    Wait Until Element Is Visible  ${Cart_Btn} 
+    Set Focus To Element  ${Cart_Btn} 
+    Click Element  ${Cart_Btn} 
+
 Checkout Cart
      Wait Until Element Contains  ${Check_Cart}  ۱
+     Wait Until Element Is Visible  ${Continue_Btn}
+     Set Focus To Element  ${Continue_Btn}
      Click Element  ${Continue_Btn}
      Wait Until Element Is Enabled  ${Send_Time_Btn}  
 

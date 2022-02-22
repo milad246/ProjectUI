@@ -20,22 +20,26 @@ Open Page
     Set Selenium Timeout  ${TIMEOUT}
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Enabled  ${Login_button}
+    wait until element is visible  ${Login_button}
+    Set Focus To Element  ${Login_button}
     Click Element  ${Login_button}
 
 Username Page
-    Wait Until Element Is Enabled  ${username_btn}   
+    wait until element is visible  ${username_btn}   
     Mouse Down  ${Input_username}
+    Set Focus To Element  ${Input_password}
     Input Text  ${Input_username}  ${username}
-    Click Element  ${username_btn} 
+    Click Element  ${username_btn}
+
 Password Page
-    Wait Until Element Is Enabled  ${password_btn} 
+    wait until element is visible  ${password_btn} 
     Mouse Down  ${Input_password}
+    Set Focus To Element  ${Input_password}
     Input Text  ${Input_password}  ${password} 
     Click Element  ${password_btn}
 
 Check Login
-    Wait Until Element Is Enabled  ${chek_login_button}
+    wait until element is visible  ${chek_login_button}
     Click Element  ${chek_login_button}
     Wait Until Page Contains  ${login_name} 
 

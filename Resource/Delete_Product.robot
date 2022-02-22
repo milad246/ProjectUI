@@ -12,11 +12,14 @@ ${Unavailable}  //p[text()='سبد خرید شما خالی است!']
 Select Cart
     Go To  ${URL}
     Maximize Browser Window
-    Wait Until Element Is Enabled  ${Cart_Page}
-    Run Keyword And Ignore Error  Mouse Down  ${Cart_Page}
-    Run Keyword And Ignore Error  Mouse Up  ${Cart_Page}
-    Run Keyword And Ignore Error  Mouse Down  ${Delet_Product_Cart}
-    Run Keyword And Ignore Error  Mouse Up  ${Delet_Product_Cart}
+    Wait Until Element Is Visible  ${Cart_Page}
+    Set Focus To Element  ${Cart_Page}
+    Mouse Down  ${Cart_Page}
+    Mouse Up  ${Cart_Page}
+    Wait Until Element Is Visible  ${Delet_Product_Cart}
+    Set Focus To Element  ${Delet_Product_Cart}
+    Mouse Down  ${Delet_Product_Cart}
+    Mouse Up  ${Delet_Product_Cart}
     Wait Until Element Is Enabled  ${Unavailable}
     Sleep  4s
   
