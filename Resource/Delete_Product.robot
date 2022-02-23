@@ -21,6 +21,5 @@ Select Cart
     Mouse Down  ${Delet_Product_Cart}
     Mouse Up  ${Delet_Product_Cart}
     Wait Until Element Is Enabled  ${Unavailable}
-    Sleep  4s
   
  

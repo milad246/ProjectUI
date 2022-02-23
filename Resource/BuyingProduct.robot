@@ -14,7 +14,7 @@ ${Cart_Btn}  //div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/d
 ${Check_Cart}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[1]/li[1]/div[1]/span[2]
 ${Continue_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/div/aside/div/div[1]/div[1]/div[4]/a/div[2]
 ${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
-
+${checkbox}  css:.w-full:nth-child(2) > .w-full > div > .d-flex > .d-inline-flex
 ***Keywords***
 Select Seller
     Set Selenium Speed  ${SPEED}
@@ -28,7 +28,7 @@ Select Seller
     Wait Until Element Is Visible  ${Select_Seller}     
     Set Focus To Element  ${Select_Seller}  
     Click Element  ${Select_Seller} 
-    Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Select_Seller}  
+    Run Keyword And Ignore Error  Checkbox Should Be Selected  ${checkbox}  
 
 Select Brand
     Wait Until Element Is Enabled  ${Filter_Brand} 
