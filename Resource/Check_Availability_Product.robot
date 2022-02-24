@@ -8,7 +8,8 @@ ${Let_Me_Know}  //*[contains(text(),"خبرم کنید")]
 ${Send_Email}  //*[contains(text(),"ارسال ایمیل به")]
 ${Unavailable}  (//*[text()='ناموجود'])[1]
 ${Second_Page}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]/div/div[1] 
-${Checkbox_finally}  //*[@id="modal-root"]/div[18]/div/div/div/div[2]/div/form/label[1]/label/input 
+${Third_page}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]/div/div[2]
+${Third_page_visi}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]
  
 ***Keywords***
 Move Page
@@ -21,7 +22,7 @@ Click Next
   Wait Until Element Is Visible  ${Second_Page}
   ${unavailable_el}=  get webelement  ${Unavailable}
   execute javascript   arguments[0].click();     ARGUMENTS    ${unavailable_el}
-
+ 
 Product Page
   Switch Window  NEW
   Wait Until Element Is Enabled  ${Unavailable}
@@ -33,10 +34,15 @@ Click Let_me_know
   Wait Until Element Is Visible  ${Let_Me_Know}
   Set Focus To Element  ${Send_Email} 
   Click Element  ${Send_Email} 
-  Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Checkbox_finally}
- 
+  Wait Until Element Is Enabled  ${Send_Email}
+  
 Check Availability
     Move Page
     Click Next
     Product Page
     Click Let_me_know
+
+
+
+
+  

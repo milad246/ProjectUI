@@ -2,6 +2,7 @@
 Documentation  A Test suit buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
+Resource  Delete_Product.robot
 
 ***Variables***
 ${Type_Seller}  //*[text()="نوع فروشنده"]
@@ -14,7 +15,8 @@ ${Cart_Btn}  //div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/d
 ${Check_Cart}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[1]/li[1]/div[1]/span[2]
 ${Continue_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/div/aside/div/div[1]/div[1]/div[4]/a/div[2]
 ${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
-${checkbox}  css:.w-full:nth-child(2) > .w-full > div > .d-flex > .d-inline-flex
+${checkbox_Seller}  //*[@id="plpLayoutContainer"]/section[2]/div[2]/div/div[1]/div[8]/div[2]/div[2]/div/div[1]/label
+${checkbox_Brand}  //*[@id="62"]
 ***Keywords***
 Select Seller
     Set Selenium Speed  ${SPEED}
@@ -26,21 +28,21 @@ Select Seller
     Wait Until Element Is Enabled  ${Select_Seller}  
     Run Keyword And Ignore Error  Scroll Element Into View  ${Select_Seller} 
     Wait Until Element Is Visible  ${Select_Seller}     
-    Set Focus To Element  ${Select_Seller}  
+    Set Focus To Element  ${Select_Seller}   
     Click Element  ${Select_Seller} 
-    Run Keyword And Ignore Error  Checkbox Should Be Selected  ${checkbox}  
+    Wait Until Element Is Enabled  ${Select_Seller} 
 
 Select Brand
     Wait Until Element Is Enabled  ${Filter_Brand} 
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Brand} 
     Wait Until Element Is Visible  ${Filter_Brand}  
     Click Element  ${Filter_Brand}
-    Wait Until Element Is Enabled  ${Filter_Select_Brand} 
+    Wait Until Element Is Enabled  ${Filter_Brand}  
+    Wait Until Element Is Visible  ${Filter_Select_Brand} 
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand} 
     Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
-    Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Filter_Select_Brand}
- 
+    Wait Until Element Is Enabled  ${Filter_Select_Brand} 
 Product Selection
     Wait Until Element Is Enabled  ${Text_Product}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Text_Product}
@@ -64,7 +66,10 @@ Checkout Cart
      Wait Until Element Is Visible  ${Continue_Btn}
      Set Focus To Element  ${Continue_Btn}
      Click Element  ${Continue_Btn}
-     Wait Until Element Is Enabled  ${Send_Time_Btn}  
+     Wait Until Element Is Enabled  ${Send_Time_Btn} 
+
+Delete Product
+     Delete Cart
 
 Buying Products
     Select Seller
@@ -72,3 +77,4 @@ Buying Products
     Product Selection
     Add to cart
     Checkout Cart
+    Delete Product

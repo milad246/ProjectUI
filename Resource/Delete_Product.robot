@@ -9,7 +9,7 @@ ${Delet_Product_Cart}  css:.bg-000 > .cartItem_CartItem__grid__Kr1In button:nth-
 ${Unavailable}  //p[text()='سبد خرید شما خالی است!']
 
 ***Keywords***
-Select Cart
+Delete Cart
     Go To  ${URL}
     Maximize Browser Window
     Wait Until Element Is Visible  ${Cart_Page}

@@ -8,8 +8,8 @@ Suite Teardown  Close All Browsers
 Test Template  Buying Magazine
 
 ***Variables***
-${Internal_Magazines}  //div[text()= "مجلات داخلی"]
-${External_Magazines}  //div[text()="مجلات خارجی"]
+${Internal_Magazines}  //img[@alt= "مجلات داخلی"]
+${External_Magazines}  //*[@alt="مجلات خارجی"]
 ${Internal_Product}  //img[@alt="مجله سینمایی فارابی شماره 84"] 
 ${External_Product}  //img[@alt="مجله THE BATMAN WHO LAUGHS 1 ژانویه 2018"] 
 ${Filter_Cover}  //*[contains(text(), "نوع جلد")] 
@@ -26,15 +26,15 @@ Buying Magazine
     wait until element is visible  ${type} 
     Set Focus To Element  ${type} 
     Click Element  ${type}
-    wait until element is visible  ${Filter_Cover}
+    Wait Until Element Is Enabled  ${Filter_Cover}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Cover}
     Set Focus To Element  ${Filter_Cover}
     Click Element  ${Filter_Cover}
-    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Type_Cover}
     wait until element is visible  ${Filter_Type_Cover}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Type_Cover}
     Set Focus To Element  ${Filter_Type_Cover}
     Click Element  ${Filter_Type_Cover}
-    Run Keyword And Ignore Error  Checkbox Should Be Selected  ${Filter_Type_Cover}
+    Wait Until Element Is Enabled  ${Filter_Type_Cover}
     wait until element is visible  ${product}
     Set Focus To Element  ${product}
     Click Image  ${product}
@@ -42,7 +42,7 @@ Buying Magazine
     Wait Until Element Is Enabled  ${Verify_Text}
 
 
-
+ 
 
 
 

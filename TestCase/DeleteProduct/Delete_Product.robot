@@ -12,5 +12,5 @@ Suite Teardown  Close Browser
 
 ***Test Cases***
 Verify Delet Product from the cart
-    Select Cart
+   Delet Cart
 
