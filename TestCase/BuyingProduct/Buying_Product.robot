@@ -7,7 +7,7 @@ Resource  ../../Resource/SelectCategoryProductApple.robot
 Resource  ../../Resource/BuyingProduct.robot
 Force Tags  Buying Product
 Suite Setup  Run Keywords  Valid Login  
-...         Delete Cart
+# ...         Delete Cart
 ...         Categories And Select Apple Prodocts
 Suite Teardown  Close Browser
 

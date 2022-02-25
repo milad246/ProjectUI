@@ -15,8 +15,8 @@ ${Cart_Btn}  //div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/d
 ${Check_Cart}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[1]/li[1]/div[1]/span[2]
 ${Continue_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/div/aside/div/div[1]/div[1]/div[4]/a/div[2]
 ${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
-${checkbox_Seller}  //*[@id="plpLayoutContainer"]/section[2]/div[2]/div/div[1]/div[8]/div[2]/div[2]/div/div[1]/label
-${checkbox_Brand}  //*[@id="62"]
+
+
 *** Keywords ***
 Select Seller
     Set Selenium Speed  ${SPEED}

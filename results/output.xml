@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220225 19:37:59.527" rpa="false" schemaversion="2">
+<suite id="s1" name="Buying Product" source="C:\Users\milad\Desktop\FirstSendProjectDidn't Feedback\ProjectUI\TestCase\BuyingProduct\Buying_Product.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Valid Login</arg>
+<arg>Categories And Select Apple Prodocts</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Valid Login" library="LoginToSystem">
+<kw name="Open Page" library="LoginToSystem">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220225 19:38:00.572" endtime="20220225 19:38:00.573"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220225 19:38:00.574" endtime="20220225 19:38:00.575"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220225 19:38:00.578" level="INFO">Opening browser 'chrome' to base url 'https://digikala.com'.</msg>
+<status status="PASS" starttime="20220225 19:38:00.575" endtime="20220225 19:39:12.580"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220225 19:39:12.581" endtime="20220225 19:39:13.630"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:13.631" endtime="20220225 19:39:14.985"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Login_button}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:14.986" endtime="20220225 19:39:15.077"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:15.079" level="INFO">Clicking element '//*[@data-cro-id="header-profile"]//div[text()="ورود | ثبت‌نام"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:15.078" endtime="20220225 19:39:15.819"/>
+</kw>
+<status status="PASS" starttime="20220225 19:38:00.571" endtime="20220225 19:39:15.820"/>
+</kw>
+<kw name="Username Page" library="LoginToSystem">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Username_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:15.821" endtime="20220225 19:39:16.003"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${Input_username}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220225 19:39:16.004" level="INFO">Simulating Mouse Down on element '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:16.003" endtime="20220225 19:39:16.355"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Input_username}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:16.356" endtime="20220225 19:39:16.402"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:16.403" level="INFO">Typing text 'milad.hajizadehh@gmail.com' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:16.402" endtime="20220225 19:39:16.941"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Username_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:16.943" level="INFO">Clicking element '//button[@data-cro-id="login-register"]//div[text()= 'ورود']'.</msg>
+<status status="PASS" starttime="20220225 19:39:16.942" endtime="20220225 19:39:17.090"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:15.821" endtime="20220225 19:39:17.091"/>
+</kw>
+<kw name="Password Page" library="LoginToSystem">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${password_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:17.092" endtime="20220225 19:39:17.600"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${Input_password}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220225 19:39:17.601" level="INFO">Simulating Mouse Down on element '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:17.600" endtime="20220225 19:39:17.932"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Input_password}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:17.933" endtime="20220225 19:39:18.327"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:18.329" level="INFO">Typing text 'Milad123456789' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:18.328" endtime="20220225 19:39:18.591"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${password_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:18.593" level="INFO">Clicking element '//button[@type="submit"]//div[text()="تایید"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:18.592" endtime="20220225 19:39:18.710"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:17.091" endtime="20220225 19:39:18.711"/>
+</kw>
+<kw name="Check Login" library="LoginToSystem">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Check_Login_Button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:18.713" endtime="20220225 19:39:36.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Check_Login_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:36.049" level="INFO">Clicking element '//div[@id='base_layout_desktop_fixed_header']//div[contains(@class,'BaseLayoutMiniProfile_BaseLayoutMiniProfile__profileButton__TwPY7 pos-relative')]'.</msg>
+<status status="PASS" starttime="20220225 19:39:36.048" endtime="20220225 19:39:36.558"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${login_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220225 19:39:36.559" endtime="20220225 19:39:36.682"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:18.712" endtime="20220225 19:39:36.682"/>
+</kw>
+<status status="PASS" starttime="20220225 19:38:00.571" endtime="20220225 19:39:36.683"/>
+</kw>
+<kw name="Categories And Select Apple Prodocts" library="SelectCategoryProductApple">
+<kw name="Mose Move Category" library="SelectCategoryProductApple">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220225 19:39:36.684" endtime="20220225 19:39:36.685"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220225 19:39:36.686" endtime="20220225 19:39:36.690"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${POPUP_CATEGORIES}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:36.690" endtime="20220225 19:39:36.920"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${POPUP_CATEGORIES}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:36.921" endtime="20220225 19:39:36.964"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${POPUP_CATEGORIES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220225 19:39:36.966" level="INFO">Simulating Mouse Over on element '//*[contains(text(), "دسته‌بندی کالاها")]'.</msg>
+<status status="PASS" starttime="20220225 19:39:36.965" endtime="20220225 19:39:37.538"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:36.684" endtime="20220225 19:39:37.539"/>
+</kw>
+<kw name="Select Apple Product" library="SelectCategoryProductApple">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${select_apple}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:37.541" endtime="20220225 19:39:42.240"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${select_apple}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:42.240" endtime="20220225 19:39:42.528"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${select_apple}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220225 19:39:42.531" level="INFO">Simulating Mouse Over on element '//*[@id="base_layout_desktop_fixed_header"]/header/nav/div[1]/div[1]/div[1]/div/div/div/div[2]/div[1]/div[1]/ul/a[8]'.</msg>
+<status status="PASS" starttime="20220225 19:39:42.529" endtime="20220225 19:39:42.953"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${select_apple}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:42.955" level="INFO">Clicking link '//*[@id="base_layout_desktop_fixed_header"]/header/nav/div[1]/div[1]/div[1]/div/div/div/div[2]/div[1]/div[1]/ul/a[8]'.</msg>
+<status status="PASS" starttime="20220225 19:39:42.953" endtime="20220225 19:39:44.108"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:37.539" endtime="20220225 19:39:44.108"/>
+</kw>
+<kw name="Select BestSellers Product" library="SelectCategoryProductApple">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Bestsellers}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:44.110" endtime="20220225 19:39:46.448"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Bestsellers}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220225 19:39:46.449" level="INFO">Simulating Mouse Over on element '//*[@id="plpLayoutContainer"]/section[1]/div[1]/div/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20220225 19:39:46.448" endtime="20220225 19:39:48.031"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Bestsellers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:48.032" level="INFO">Clicking element '//*[@id="plpLayoutContainer"]/section[1]/div[1]/div/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20220225 19:39:48.031" endtime="20220225 19:39:48.925"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Bestsellers}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:48.927" endtime="20220225 19:39:49.353"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:44.109" endtime="20220225 19:39:49.353"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:36.683" endtime="20220225 19:39:49.354"/>
+</kw>
+<status status="PASS" starttime="20220225 19:38:00.569" endtime="20220225 19:39:49.354"/>
+</kw>
+<test id="s1-t1" name="Verfy Buying product on the Digikala">
+<kw name="Buying Products" library="BuyingProduct">
+<kw name="Select Seller" library="BuyingProduct">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220225 19:39:49.362" endtime="20220225 19:39:49.364"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220225 19:39:49.366" endtime="20220225 19:39:49.375"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Type_Seller}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:49.375" endtime="20220225 19:39:50.421"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Type_Seller}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Type_Seller}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:39:51.285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:39:51.555" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:39:50.422" endtime="20220225 19:39:51.555"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:50.421" endtime="20220225 19:39:51.555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Type_Seller}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:51.556" endtime="20220225 19:39:52.530"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Type_Seller}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:52.532" level="INFO">Clicking element '//*[text()="نوع فروشنده"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:52.531" endtime="20220225 19:39:53.122"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:53.122" endtime="20220225 19:39:53.315"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Select_Seller}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:39:53.944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:39:53.950" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:39:53.316" endtime="20220225 19:39:53.950"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:53.315" endtime="20220225 19:39:53.950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:53.951" endtime="20220225 19:39:54.047"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:39:54.048" endtime="20220225 19:39:54.147"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:54.149" level="INFO">Clicking element '//*[text()="دیجی‌کالا"]'.</msg>
+<status status="PASS" starttime="20220225 19:39:54.148" endtime="20220225 19:39:54.933"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Select_Seller}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20220225 19:39:56.562" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20220225 19:39:54.934" endtime="20220225 19:39:56.921"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:49.360" endtime="20220225 19:39:56.922"/>
+</kw>
+<kw name="Select Brand" library="BuyingProduct">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Filter_Brand}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:56.924" endtime="20220225 19:39:57.063"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Filter_Brand}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Filter_Brand}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:39:58.631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:39:58.637" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:39:57.064" endtime="20220225 19:39:58.637"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:57.063" endtime="20220225 19:39:58.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Filter_Brand}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:58.638" endtime="20220225 19:39:58.730"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Filter_Brand}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:39:58.734" level="INFO">Clicking element '//*[(text()="برند")]'.</msg>
+<status status="PASS" starttime="20220225 19:39:58.732" endtime="20220225 19:39:59.090"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Filter_Brand}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:39:59.090" endtime="20220225 19:39:59.257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Filter_Select_Brand}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:39:59.257" endtime="20220225 19:39:59.334"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Filter_Select_Brand}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Filter_Select_Brand}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:40:00.021" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:40:00.028" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:39:59.336" endtime="20220225 19:40:00.029"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:59.335" endtime="20220225 19:40:00.030"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Filter_Select_Brand}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:00.031" endtime="20220225 19:40:00.277"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Filter_Select_Brand}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:00.280" level="INFO">Clicking element '//*[text()="Apple"]'.</msg>
+<status status="PASS" starttime="20220225 19:40:00.278" endtime="20220225 19:40:01.050"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Filter_Select_Brand}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:40:01.052" endtime="20220225 19:40:02.892"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:56.922" endtime="20220225 19:40:02.893"/>
+</kw>
+<kw name="Product Selection" library="BuyingProduct">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:40:02.896" endtime="20220225 19:40:03.040"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Text_Product}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:40:04.802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:40:04.808" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:40:03.041" endtime="20220225 19:40:04.808"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:03.040" endtime="20220225 19:40:04.809"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:04.811" endtime="20220225 19:40:05.026"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:05.026" endtime="20220225 19:40:05.104"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:05.105" level="INFO">Clicking element '//*[text()= "گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 512 گیگابایت و 6 گیگابایت رم"]'.</msg>
+<status status="PASS" starttime="20220225 19:40:05.104" endtime="20220225 19:40:05.673"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:02.893" endtime="20220225 19:40:05.674"/>
+</kw>
+<kw name="Add to cart" library="BuyingProduct">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:05.676" endtime="20220225 19:40:05.719"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Text_Product}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:40:05.720" endtime="20220225 19:40:18.606"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Scroll Element Into View</arg>
+<arg>${Buy_Btn}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Buy_Btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20220225 19:40:20.541" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220225 19:40:20.547" level="FAIL">MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A9FDC3+2555331]
+	Ordinal0 [0x00A377F1+2127857]
+	Ordinal0 [0x00932CD0+1060048]
+	Ordinal0 [0x0098ECE6+1436902]
+	Ordinal0 [0x00977B0C+1342220]
+	Ordinal0 [0x009875FA+1406458]
+	Ordinal0 [0x00977976+1341814]
+	Ordinal0 [0x009536B6+1193654]
+	Ordinal0 [0x00954546+1197382]
+	GetHandleVerifier [0x00C39622+1619522]
+	GetHandleVerifier [0x00CE882C+2336844]
+	GetHandleVerifier [0x00B323E1+541697]
+	GetHandleVerifier [0x00B31443+537699]
+	Ordinal0 [0x00A3D18E+2150798]
+	Ordinal0 [0x00A41518+2168088]
+	Ordinal0 [0x00A41660+2168416]
+	Ordinal0 [0x00A4B330+2208560]
+	BaseThreadInitThunk [0x764FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77767A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77767A6E+238]
+</msg>
+<status status="FAIL" starttime="20220225 19:40:18.608" endtime="20220225 19:40:20.548"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:18.607" endtime="20220225 19:40:20.548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Buy_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:20.549" endtime="20220225 19:40:20.696"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Buy_Btn}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:20.696" endtime="20220225 19:40:20.813"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Buy_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:20.815" level="INFO">Clicking element '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div[2]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20220225 19:40:20.814" endtime="20220225 19:40:21.175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Cart_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:21.176" endtime="20220225 19:40:22.005"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Cart_Btn}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:22.006" endtime="20220225 19:40:22.125"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Cart_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:22.129" level="INFO">Clicking element '//div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div/div[8]/div/div[2]/div[3]/div[2]/div/a/p'.</msg>
+<status status="PASS" starttime="20220225 19:40:22.126" endtime="20220225 19:40:22.859"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:05.674" endtime="20220225 19:40:22.861"/>
+</kw>
+<kw name="Checkout Cart" library="BuyingProduct">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${Check_Cart}</arg>
+<arg>۱</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220225 19:40:22.865" endtime="20220225 19:40:24.521"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Continue_Btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:24.522" endtime="20220225 19:40:24.640"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Continue_Btn}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:24.640" endtime="20220225 19:40:24.757"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Continue_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:24.759" level="INFO">Clicking element '//*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/div/aside/div/div[1]/div[1]/div[4]/a/div[2]'.</msg>
+<status status="PASS" starttime="20220225 19:40:24.757" endtime="20220225 19:40:25.165"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Send_Time_Btn}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:40:25.165" endtime="20220225 19:40:26.351"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:22.863" endtime="20220225 19:40:26.352"/>
+</kw>
+<kw name="Delete Product" library="BuyingProduct">
+<kw name="Delete Cart" library="Delete_Product">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220225 19:40:26.355" level="INFO">Opening url 'https://digikala.com'</msg>
+<status status="PASS" starttime="20220225 19:40:26.354" endtime="20220225 19:40:42.801"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220225 19:40:42.802" endtime="20220225 19:40:42.901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Cart_Page}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:42.902" endtime="20220225 19:40:43.086"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Cart_Page}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:43.086" endtime="20220225 19:40:43.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Cart_Page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220225 19:40:43.291" level="INFO">Clicking element '//*[(@class='pos-relative d-inline-flex py-2 pr-2 pl-0 p-2-lg bg-000 radius' or @href="/checkout/cart/") and @data-cro-id="header-cart"]'.</msg>
+<status status="PASS" starttime="20220225 19:40:43.288" endtime="20220225 19:40:44.021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Delet_Product_Cart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220225 19:40:44.022" endtime="20220225 19:40:46.071"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${Delet_Product_Cart}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220225 19:40:46.072" endtime="20220225 19:40:46.543"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${Delet_Product_Cart}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220225 19:40:46.546" level="INFO">Simulating Mouse Down on element 'css:.bg-000 &gt; .cartItem_CartItem__grid__Kr1In button:nth-child(3) svg'.</msg>
+<status status="PASS" starttime="20220225 19:40:46.543" endtime="20220225 19:40:46.941"/>
+</kw>
+<kw name="Mouse Up" library="SeleniumLibrary">
+<arg>${Delet_Product_Cart}</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20220225 19:40:46.944" level="INFO">Simulating Mouse Up on element 'css:.bg-000 &gt; .cartItem_CartItem__grid__Kr1In button:nth-child(3) svg'.</msg>
+<status status="PASS" starttime="20220225 19:40:46.941" endtime="20220225 19:40:50.807"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${Unavailable}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220225 19:40:50.808" endtime="20220225 19:40:51.427"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:26.353" endtime="20220225 19:40:51.427"/>
+</kw>
+<status status="PASS" starttime="20220225 19:40:26.352" endtime="20220225 19:40:51.428"/>
+</kw>
+<status status="PASS" starttime="20220225 19:39:49.358" endtime="20220225 19:40:51.428"/>
+</kw>
+<tag>Buying Product</tag>
+<status status="PASS" starttime="20220225 19:39:49.355" endtime="20220225 19:40:51.430"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220225 19:40:51.435" endtime="20220225 19:40:56.303"/>
+</kw>
+<doc>A Test suit buying product on the digikala</doc>
+<status status="PASS" starttime="20220225 19:37:59.532" endtime="20220225 19:40:56.303"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Buying Product</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Buying Product">Buying Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
