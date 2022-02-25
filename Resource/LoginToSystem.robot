@@ -5,10 +5,10 @@ Resource  Variables.robot
 
 *** Variables ***
 ${Login_button}  //*[contains(text(), 'ورود | ثبت‌نام')]
-${Input_username}  //*[@id="__next"]/main/div[2]/form/label/div/div/input
+${Input_username}  //input[@name="username"]
 ${username}  milad.hajizadehh@gmail.com
 ${username_btn}  //div[contains(text(), 'ورود')]
-${Input_password}  //*[@id="__next"]/main/div[2]/form/label/div/div[1]/input
+${Input_password}  //input[@name="password"]
 ${password}  Milad123456789
 ${password_btn}  //div[contains(text(), 'تایید')]
 ${chek_login_button}  css:.BaseLayoutMiniProfile_BaseLayoutMiniProfile__profileButton__TwPY7 > .d-flex:nth-child(2) > svg 
