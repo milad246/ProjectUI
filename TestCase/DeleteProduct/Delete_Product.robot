@@ -1,4 +1,4 @@
-***Settings***
+*** Settings ***
 Documentation  A Test Suit Remove the product from the cart
 Resource  ../../Resource/LoginToSystem.robot
 Resource  ../../Resource/SelectCategoryProductApple.robot
@@ -10,7 +10,7 @@ Suite Setup  Run Keywords  Valid Login
 # ...          Buying Products         
 Suite Teardown  Close Browser
 
-***Test Cases***
+*** Test Cases ***
 Verify Delet Product from the cart
    Delet Cart
 

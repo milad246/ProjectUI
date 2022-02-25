@@ -1,13 +1,13 @@
-***Settings***
+*** Settings ***
 Documentation  A Test suit select product apple on the categories
 Library  SeleniumLibrary
 Resource  Variables.robot
 
-****Variables***
+*** Variables ***
 ${select_apple}  //*[@id="base_layout_desktop_fixed_header"]/header/nav/div[1]/div[1]/div[1]/div/div/div/div[2]/div[1]/div[1]/ul/a[8]
 ${Bestsellers}  //*[@id="plpLayoutContainer"]/section[1]/div[1]/div/div[2]/div[1] 
 
-***Keywords***
+*** Keywords ***
 Mose Move Category
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}

@@ -1,8 +1,8 @@
-***Settings***
+*** Settings ***
 Library  SeleniumLibrary
 Resource  Variables.robot
 
-***Variables***
+*** Variables ***
 ${Unavailable_Product}  //img[@alt="گوشی موبایل اپل مدل iPhone 12 mini A2176 ظرفیت 128 گیگابایت"]
 ${Let_Me_Know}  //*[contains(text(),"خبرم کنید")]
 ${Send_Email}  //*[contains(text(),"ارسال ایمیل به")]
@@ -11,7 +11,7 @@ ${Second_Page}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]/div/div[1
 ${Third_page}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]/div/div[2]
 ${Third_page_visi}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]
  
-***Keywords***
+*** Keywords ***
 Move Page
   Set Selenium Speed  ${SPEED}
   Set Selenium Timeout  ${TIMEOUT} 

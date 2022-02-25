@@ -1,9 +1,9 @@
-***Settings***
+*** Settings ***
 Documentation  A Test suit to connect to the system
 Library  SeleniumLibrary
 Resource  Variables.robot
 
-***Variables***
+*** Variables ***
 ${Login_button}  //*[contains(text(), 'ورود | ثبت‌نام')]
 ${Input_username}  //*[@id="__next"]/main/div[2]/form/label/div/div/input
 ${username}  milad.hajizadehh@gmail.com
@@ -14,7 +14,7 @@ ${password_btn}  //div[contains(text(), 'تایید')]
 ${chek_login_button}  css:.BaseLayoutMiniProfile_BaseLayoutMiniProfile__profileButton__TwPY7 > .d-flex:nth-child(2) > svg 
 ${login_name}  Milad Hajizadeh
 
-**Keywords***
+*** Keywords ***
 Open Page
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}

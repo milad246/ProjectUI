@@ -1,14 +1,14 @@
-***Settings***
+*** Settings ***
 Library  SeleniumLibrary
 Resource  Variables.robot
 
-***Variables***
+*** Variables ***
 ${Select_Book_Magazin}  //p[text()= "کتاب، لوازم تحریر و هنر"]
 ${Valid_Page}  //*[text()="خرید بر اساس دسته‌بندی"]
 ${Select_Magazin_Map}  //img[@alt="مجلات، نقشه و نشانگر کتاب"]
 ${Magazine}  //img[@alt= "مجلات"]	
 
-***Keywords***
+*** Keywords ***
 Open Page
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}

@@ -1,4 +1,4 @@
-***Settings***
+*** Settings ***
 Documentation  A Test suit buying product on the digikala
 Resource  ../../Resource/Variables.robot
 Resource  ../../Resource/LoginToSystem.robot
@@ -11,7 +11,7 @@ Suite Setup  Run Keywords  Valid Login
 ...         Categories And Select Apple Prodocts
 Suite Teardown  Close Browser
 
-***Test Cases***
+*** Test Cases ***
 Verfy Buying product on the Digikala
     Buying Products 
 

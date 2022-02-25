@@ -1,10 +1,10 @@
-***Settings***
+*** Settings ***
 Documentation  A Test suit buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
 Resource  Delete_Product.robot
 
-***Variables***
+*** Variables ***
 ${Type_Seller}  //*[text()="نوع فروشنده"]
 ${Select_Seller}  //*[text()="دیجی‌کالا"]
 ${Filter_Brand}  //*[(text()="برند")]
@@ -17,7 +17,7 @@ ${Continue_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/
 ${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
 ${checkbox_Seller}  //*[@id="plpLayoutContainer"]/section[2]/div[2]/div/div[1]/div[8]/div[2]/div[2]/div/div[1]/label
 ${checkbox_Brand}  //*[@id="62"]
-***Keywords***
+*** Keywords ***
 Select Seller
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}

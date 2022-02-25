@@ -1,4 +1,4 @@
-***Settings***
+*** Settings ***
 Documentation  A Test Suit buying magazin from the category books and stationery
 Library  SeleniumLibrary
 Resource  ../../Resource/Common.robot
@@ -7,7 +7,7 @@ Test Setup  Select PopUp Categories And Book Magazine
 Suite Teardown  Close All Browsers
 Test Template  Buying Magazine
 
-***Variables***
+*** Variables ***
 ${Internal_Magazines}  //img[@alt= "مجلات داخلی"]
 ${External_Magazines}  //*[@alt="مجلات خارجی"]
 ${Internal_Product}  //img[@alt="مجله سینمایی فارابی شماره 84"] 
@@ -16,11 +16,11 @@ ${Filter_Cover}  //*[contains(text(), "نوع جلد")]
 ${Filter_Type_Cover}  //div[text()= 'کاغذی'] 
 ${Verify_Text}  //p[contains(text(), 'کاغذی')] 
 
-***Test Cases***          type                   product              
+*** Test Cases ***          type                   product              
 Buying Magazine Internal  ${Internal_Magazines}  ${Internal_Product}      
 Buying Magazine External  ${External_Magazines}  ${External_Product}    
 
-***Keywords***
+*** Keywords ***
 Buying Magazine
     [Arguments]  ${type}  ${product} 
     wait until element is visible  ${type} 

@@ -1,4 +1,4 @@
-***Settings***
+*** Settings ***
 Documentation  A Test suit for check availability of the product
 Resource  ../../Resource/LoginToSystem.robot
 Resource  ../../Resource/SelectCategoryProductApple.robot
@@ -8,7 +8,7 @@ Suite Setup  Run Keywords  Valid Login
 ...          Categories And Select Apple Prodocts
 Suite Teardown  Close Browser
 
-***Test Cases***
+*** Test Cases ***
 Check product availability
     Check Availability
 
