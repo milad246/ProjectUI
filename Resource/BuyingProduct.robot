@@ -6,9 +6,10 @@ Resource  Delete_Product.robot
 
 *** Variables ***
 ${Type_Seller}  //*[text()="نوع فروشنده"]
-${Select_Seller}  //*[text()="دیجی‌کالا"]
-${Filter_Brand}  //*[(text()="برند")]
-${Filter_Select_Brand}  //*[text()="Apple"]
+${Select_Seller}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]
+${Select_Seller_Checkbox_Input}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]/../input
+${Filter_Brand}  //div[contains(@class,'text-subtitle-strong d-flex') and text()="برند"]
+${Filter_Select_Brand}  //label[contains(@class,"w-full d-flex ai-center jc-between py-3 pl-3-lg border-b") and @for='280']//div[text()="اپل"]
 ${Text_Product}  //*[text()= "گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 512 گیگابایت و 6 گیگابایت رم"]  
 ${Buy_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div[2]/div[3]/button[1]
 ${Cart_Btn}  //div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div/div[8]/div/div[2]/div[3]/div[2]/div/a/p 
@@ -30,8 +31,9 @@ Select Seller
     Wait Until Element Is Visible  ${Select_Seller}     
     Set Focus To Element  ${Select_Seller}   
     Click Element  ${Select_Seller} 
-    Wait Until Element Is Enabled  ${Select_Seller} 
-
+    # get element attribute   ${Select_Seller_Checkbox_Input}   checked
+    # Run Keyword And Ignore Error  Checkbox Should Be Selected  ${checkbox}
+   
 Select Brand
     Wait Until Element Is Enabled  ${Filter_Brand} 
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Brand} 
@@ -43,6 +45,7 @@ Select Brand
     Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
     Wait Until Element Is Enabled  ${Filter_Select_Brand} 
+
 Product Selection
     Wait Until Element Is Enabled  ${Text_Product}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Text_Product}

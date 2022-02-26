@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Resource  Variables.robot
 
 *** Variables ***
-${Select_Book_Magazin}  //p[text()= "کتاب، لوازم تحریر و هنر"]
+${Select_Book_Magazin}  //p[text()='کتاب، لوازم تحریر و هنر' and //a[@href='/main/book-and-media/']//p[1]
 ${Valid_Page}  //*[text()="خرید بر اساس دسته‌بندی"]
 ${Select_Magazin_Map}  //img[@alt="مجلات، نقشه و نشانگر کتاب"]
 ${Magazine}  //img[@alt= "مجلات"]	
