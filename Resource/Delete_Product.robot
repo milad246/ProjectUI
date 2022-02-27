@@ -5,7 +5,7 @@ Resource  Variables.robot
 *** Variables ***
 ${Cart_Page}  //*[(@class='pos-relative d-inline-flex py-2 pr-2 pl-0 p-2-lg bg-000 radius' or @href="/checkout/cart/") and @data-cro-id="header-cart"]
 ${Delet_Product_Cart}  css:.bg-000 > .cartItem_CartItem__grid__Kr1In button:nth-child(3) svg
-${Unavailable}  //p[text()='سبد خرید شما خالی است!']
+${Unavailable}  //*[@class='d-flex jc-center']/following::*[text()="سبد خرید شما خالی است!"][2]
 
 *** Keywords ***
 Delete Cart

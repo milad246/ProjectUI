@@ -9,14 +9,15 @@ ${Type_Seller}  //*[text()="نوع فروشنده"]
 ${Select_Seller}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]
 ${Select_Seller_Checkbox_Input}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]/../input
 ${Filter_Brand}  //div[contains(@class,'text-subtitle-strong d-flex') and text()="برند"]
-${Filter_Select_Brand}  //label[contains(@class,"w-full d-flex ai-center jc-between py-3 pl-3-lg border-b") and @for='280']//div[text()="اپل"]
-${Text_Product}  //*[text()= "گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 512 گیگابایت و 6 گیگابایت رم"]  
-${Buy_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div[1]/div[8]/div/div[2]/div[3]/button[1]
-${Cart_Btn}  //div[@id='__next']/div/div[3]/div[3]/div[2]/div[2]/div[2]/div[2]/div[3]/div/div[8]/div/div[2]/div[3]/div[2]/div/a/p 
-${Check_Cart}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[1]/li[1]/div[1]/span[2]
-${Continue_Btn}  //*[@id="__next"]/div[1]/div[3]/div[3]/div[2]/div/ul[2]/li/div/div/aside/div/div[1]/div[1]/div[4]/a/div[2]
-${Send_Time_Btn}  //div[text()="انتخاب زمان ارسال"]
-
+${Filter_Select_Brand}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class, "Checkbox")][2]
+${Filter_Select_Brand_Checkbox_Input}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class, "Checkbox")][2]/../input
+${Text_Product}  //*[@class="border-b"]//img[@alt='گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 256 گیگابایت و 6 گیگابایت رم']
+${Verify_Product}  //div[@class='d-flex ai-center']/following-sibling::h1[text()="گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 256 گیگابایت و 6 گیگابایت رم"]
+${Add_Cart_Btn}  //*[contains(@class,"Button_module_btn_Medium__2510bed4") and @data-cro-id="pdp-add-to-cart"]//div[text()="افزودن به سبد"]
+${Cart_Btn}  //*[@class="color-secondary-500" and @data-cro-id="pdp-see-cart-main"]//p[text()='سبد خرید']
+${Check_Cart}  //div[@data-cro-id='cart-main-cart']//span[2]
+${Continue_Btn}  //*[contains(@class,"d-block-lg")]/following::*[contains(@class, 'jc-center') and text()='ادامه']
+${Send_Time_Btn}  //aside/descendant::*[text()='انتخاب زمان ارسال']
 
 *** Keywords ***
 Select Seller
@@ -50,16 +51,15 @@ Product Selection
     Wait Until Element Is Enabled  ${Text_Product}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Text_Product}
     Wait Until Element Is Visible  ${Text_Product}    
-    Set Focus To Element  ${Text_Product}
     Click Element  ${Text_Product}
     
 Add to cart  
     Switch Window  NEW
-    Wait Until Element Is Enabled  ${Text_Product} 
-    Run Keyword And Ignore Error  Scroll Element Into View  ${Buy_Btn}
-    Wait Until Element Is Visible  ${Buy_Btn}   
-    Set Focus To Element  ${Buy_Btn}
-    Click Element  ${Buy_Btn}
+    Wait Until Element Is Enabled  ${Verify_Product}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Add_Cart_Btn}
+    Wait Until Element Is Visible  ${Add_Cart_Btn}   
+    Set Focus To Element  ${Add_Cart_Btn}
+    Click Element  ${Add_Cart_Btn}
     Wait Until Element Is Visible  ${Cart_Btn} 
     Set Focus To Element  ${Cart_Btn} 
     Click Element  ${Cart_Btn} 
