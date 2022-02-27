@@ -3,10 +3,10 @@ Library  SeleniumLibrary
 Resource  Variables.robot
 
 *** Variables ***
-${Select_Book_Magazin}  //p[text()='کتاب، لوازم تحریر و هنر' and //a[@href='/main/book-and-media/']//p[1]
-${Valid_Page}  //*[text()="خرید بر اساس دسته‌بندی"]
-${Select_Magazin_Map}  //img[@alt="مجلات، نقشه و نشانگر کتاب"]
-${Magazine}  //img[@alt= "مجلات"]	
+${Popup_Categories}  //nav/descendant::span[text()='دسته‌بندی کالاها']
+${Select_Book_Magazin}  //*[@data-cro-id="header-main-menu-categories" and @href="/main/book-and-media/"]//p[text()="کتاب، لوازم تحریر و هنر"]
+${Select_Magazin_Map}  //*[@data-cro-id="hp-categories-icons"]//img[@alt="مجلات، نقشه و نشانگر کتاب" and @class="w-100"]
+${Magazine}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@alt='مجلات' and @class='w-100']	
 
 *** Keywords ***
 Open Page
@@ -15,14 +15,13 @@ Open Page
     Open Browser  ${URL}  ${BROWSER}
     Maximize Browser Window
 
-Select Product Category
-    Wait Until Element Is Enabled  ${POPUP_CATEGORIES} 
-    Set Focus To Element  ${POPUP_CATEGORIES} 
-    Mouse Over  ${POPUP_CATEGORIES}
+Select Products Category
+    Wait Until Element Is Enabled  ${Popup_Categories} 
+    Set Focus To Element  ${Popup_Categories} 
+    Mouse Over  ${Popup_Categories}
 
 Select Books and Magazines
-    Wait Until Element Is Enabled  ${Select_Book_Magazin} 
-    Set Focus To Element  ${Select_Book_Magazin} 
+    Wait Until Element Is Enabled  ${Select_Book_Magazin}
     Mouse Over  ${Select_Book_Magazin}
     Click Element  ${Select_Book_Magazin}
 
@@ -38,7 +37,7 @@ Select Categories Book Magazing
     
 Select PopUp Categories And Book Magazine
     Open Page
-    Select Product Category
+    Select Products Category
     Select Books and Magazines
     Select Categories Book Magazing
 
