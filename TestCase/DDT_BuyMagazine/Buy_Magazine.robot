@@ -8,13 +8,14 @@ Suite Teardown  Close All Browsers
 Test Template  Buying Magazine
 
 *** Variables ***
-${Internal_Magazines}  //img[@alt= "مجلات داخلی"]
-${External_Magazines}  //*[@alt="مجلات خارجی"]
-${Internal_Product}  //img[@alt="مجله سینمایی فارابی شماره 84"] 
-${External_Product}  //img[@alt="مجله THE BATMAN WHO LAUGHS 1 ژانویه 2018"] 
-${Filter_Cover}  //*[contains(text(), "نوع جلد")] 
-${Filter_Type_Cover}  //div[text()= 'کاغذی'] 
-${Verify_Text}  //p[contains(text(), 'کاغذی')] 
+${Internal_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="w-100 lazyloaded" or @alt="مجلات داخلی"]
+${External_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="w-100 ls-is-cached lazyloaded" or @alt="مجلات خارجی"]
+${Filter_Cover}  //section[contains(@class,"plpLayout_plplayout__filter__6kcec")]/descendant::*[contains(@class,"text-subtitle-strong") and text()="نوع جلد"]
+${Filter_Type_Cover}  //section[2]/descendant::*[@class="text-subtitle-strong" and text()="کاغذی"]
+${Filter_Type_Cover_Checkbox}  //section[2]/descendant::*[@class="text-subtitle-strong" and text()="کاغذی"]/preceding::*[contains(@class,"Checkbox_module_Checkbox__checkbox_Secondary__9c06606f")][1]/../input
+${Internal_Product}  //*[contains(@class,'border-r-100')]/following::*//img[(contains(@class,'radius-medium') and @alt='مجله سینمایی فارابی شماره 84')] 
+${External_Product}  //*[contains(@class,'border-r-100')]/following::img[(contains(@class,'radius-medium') and @alt="مجله THE BATMAN WHO LAUGHS 1 ژانویه 2018")]
+${Verify_Text}  //p[@class='color-500 text-body-1']/following-sibling::p[text()="کاغذی"]
 
 *** Test Cases ***          type                   product              
 Buying Magazine Internal  ${Internal_Magazines}  ${Internal_Product}      
@@ -24,11 +25,9 @@ Buying Magazine External  ${External_Magazines}  ${External_Product}
 Buying Magazine
     [Arguments]  ${type}  ${product} 
     wait until element is visible  ${type} 
-    Set Focus To Element  ${type} 
     Click Element  ${type}
     Wait Until Element Is Enabled  ${Filter_Cover}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Cover}
-    Set Focus To Element  ${Filter_Cover}
     Click Element  ${Filter_Cover}
     wait until element is visible  ${Filter_Type_Cover}
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Type_Cover}
@@ -36,7 +35,6 @@ Buying Magazine
     Click Element  ${Filter_Type_Cover}
     Wait Until Element Is Enabled  ${Filter_Type_Cover}
     wait until element is visible  ${product}
-    Set Focus To Element  ${product}
     Click Image  ${product}
     Switch Window  NEW
     Wait Until Element Is Enabled  ${Verify_Text}

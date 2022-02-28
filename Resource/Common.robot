@@ -5,8 +5,8 @@ Resource  Variables.robot
 *** Variables ***
 ${Popup_Categories}  //nav/descendant::span[text()='دسته‌بندی کالاها']
 ${Select_Book_Magazin}  //*[@data-cro-id="header-main-menu-categories" and @href="/main/book-and-media/"]//p[text()="کتاب، لوازم تحریر و هنر"]
-${Select_Magazin_Map}  //*[@data-cro-id="hp-categories-icons"]//img[@alt="مجلات، نقشه و نشانگر کتاب" and @class="w-100"]
-${Magazine}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@alt='مجلات' and @class='w-100']	
+${Select_Magazin_Map}  //*[@data-cro-id="hp-categories-icons"]//img[@alt="مجلات، نقشه و نشانگر کتاب" and contains(@class,"w-100")]
+${Magazine}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@alt='مجلات' and contains(@class,'w-100')]	
 
 *** Keywords ***
 Open Page
