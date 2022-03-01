@@ -4,7 +4,7 @@ Resource  Variables.robot
 
 *** Variables ***
 ${Popup_Categories}  //nav/descendant::span[text()='دسته‌بندی کالاها']
-${Select_Book_Magazin}  //*[@data-cro-id="header-main-menu-categories" and @href="/main/book-and-media/"]//p[text()="کتاب، لوازم تحریر و هنر"]
+${Select_Book_Magazin}  //*[@data-cro-id="header-main-menu-categories"]//p[text()="کتاب، لوازم تحریر و هنر"]
 ${Select_Magazin_Map}  //*[@data-cro-id="hp-categories-icons"]//img[@alt="مجلات، نقشه و نشانگر کتاب" and contains(@class,"w-100")]
 ${Magazine}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@alt='مجلات' and contains(@class,'w-100')]	
 
@@ -21,9 +21,9 @@ Select Products Category
     Mouse Over  ${Popup_Categories}
 
 Select Books and Magazines
-    Wait Until Element Is Enabled  ${Select_Book_Magazin}
-    Mouse Over  ${Select_Book_Magazin}
-    Click Element  ${Select_Book_Magazin}
+    Wait Until Element Is Visible  ${Select_Book_Magazin}
+    Mouse Down  ${Select_Book_Magazin}
+    Mouse Up  ${Select_Book_Magazin}
 
 Select Categories Book Magazing
     Wait Until Element Is Enabled  ${Select_Magazin_Map}
