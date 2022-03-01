@@ -29,11 +29,11 @@ Select Seller
     Click Element  ${Type_Seller}
     Wait Until Element Is Enabled  ${Select_Seller}  
     Run Keyword And Ignore Error  Scroll Element Into View  ${Select_Seller} 
-    Wait Until Element Is Visible  ${Select_Seller}     
-    Set Focus To Element  ${Select_Seller}   
-    Click Element  ${Select_Seller} 
-    # get element attribute   ${Select_Seller_Checkbox_Input}   checked
-    # Run Keyword And Ignore Error  Checkbox Should Be Selected  ${checkbox}
+    Wait Until Element Is Visible  ${Select_Seller} 
+    Page Should Contain Checkbox  ${Select_Seller_Checkbox_Input}      
+    Set Focus To Element  ${Select_Seller} 
+    Click Element  ${Select_Seller}
+    Get Element Attribute  ${Select_Seller_Checkbox_Input}  checked
    
 Select Brand
     Wait Until Element Is Enabled  ${Filter_Brand} 
@@ -41,11 +41,12 @@ Select Brand
     Wait Until Element Is Visible  ${Filter_Brand}  
     Click Element  ${Filter_Brand}
     Wait Until Element Is Enabled  ${Filter_Brand}  
-    Wait Until Element Is Visible  ${Filter_Select_Brand} 
-    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand} 
+    Wait Until Element Is Visible  ${Filter_Select_Brand}  
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand}
+    Page Should Contain Checkbox  ${Filter_Select_Brand_Checkbox_Input} 
     Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
-    Wait Until Element Is Enabled  ${Filter_Select_Brand} 
+    Get Element Attribute  ${Filter_Select_Brand_Checkbox_Input}  checked 
 
 Product Selection
     Wait Until Element Is Enabled  ${Text_Product}
