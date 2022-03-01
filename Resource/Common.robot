@@ -16,7 +16,7 @@ Open Page
     Maximize Browser Window
 
 Select Products Category
-    Wait Until Element Is Enabled  ${Popup_Categories} 
+    Wait Until Element Is Visible  ${Popup_Categories} 
     Set Focus To Element  ${Popup_Categories} 
     Mouse Over  ${Popup_Categories}
 

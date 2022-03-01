@@ -12,7 +12,8 @@ ${Best_Seller}  //div[@data-cro-id='plp-sort-option' and text()='پرفروش‌
 Mose Move Category
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}
-    Wait Until Element Is Enabled  ${Popup_Categories} 
+    Wait Until Element Is Visible  ${Popup_Categories} 
+    Set Focus To Element  ${Popup_Categories} 
     Mouse Over  ${Popup_Categories}
 
 Select Apple Product

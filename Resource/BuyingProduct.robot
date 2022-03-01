@@ -9,8 +9,8 @@ ${Type_Seller}  //*[text()="نوع فروشنده"]
 ${Select_Seller}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]
 ${Select_Seller_Checkbox_Input}  //*[contains(@class, 'text-subtitle-strong') and contains(text(), 'دیجی‌کالا')]/preceding::*[contains(@class, 'checkbox')][1]/../input
 ${Filter_Brand}  //div[contains(@class,'text-subtitle-strong d-flex') and text()="برند"]
-${Filter_Select_Brand}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class, "Checkbox")][2]
-${Filter_Select_Brand_Checkbox_Input}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class, "Checkbox")][2]/../input
+${Filter_Select_Brand}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class,"Checkbox_module_Checkbox__checkbox_Secondary__9c06606f")][1]
+${Filter_Select_Brand_Checkbox_Input}  //div[@class='text-subtitle-strong' and text()="اپل"]/preceding::*[contains(@class,"Checkbox_module_Checkbox__checkbox_Secondary__9c06606f")][1]/../input
 ${Text_Product}  //img[contains(@data-src,'9582480838e6440356f8469461aa51a7fa84cba2_1631648769.jpg') and @alt="گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 512 گیگابایت و 6 گیگابایت رم"]
 ${Verify_Product}  //div[@class='d-flex ai-center']/following-sibling::h1[text()="گوشی موبایل اپل مدل iPhone 13 Pro A2639 دو سیم‌ کارت ظرفیت 512 گیگابایت و 6 گیگابایت رم"]
 ${Add_Cart_Btn}  //*[contains(@class,"Button_module_btn_Medium__2510bed4") and @data-cro-id="pdp-add-to-cart"]//div[text()="افزودن به سبد"]
@@ -23,29 +23,30 @@ ${Send_Time_Btn}  //aside/descendant::*[text()='انتخاب زمان ارسال
 Select Seller
     Set Selenium Speed  ${SPEED}
     Set Selenium Timeout  ${TIMEOUT}
-    Wait Until Element Is Enabled  ${Type_Seller}
-    Run Keyword And Ignore Error  Scroll Element Into View  ${Type_Seller}
     Wait Until Element Is Visible  ${Type_Seller}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Type_Seller}
+    Wait Until Element Is Enabled  ${Type_Seller}
     Click Element  ${Type_Seller}
-    Wait Until Element Is Enabled  ${Select_Seller}  
+    Wait Until Element Is Visible  ${Select_Seller}  
     Run Keyword And Ignore Error  Scroll Element Into View  ${Select_Seller} 
-    Wait Until Element Is Visible  ${Select_Seller} 
+    Wait Until Element Is Enabled  ${Select_Seller} 
     Page Should Contain Checkbox  ${Select_Seller_Checkbox_Input}      
     Set Focus To Element  ${Select_Seller} 
     Click Element  ${Select_Seller}
+    Set Focus To Element  ${Select_Seller_Checkbox_Input} 
     Get Element Attribute  ${Select_Seller_Checkbox_Input}  checked
    
 Select Brand
-    Wait Until Element Is Enabled  ${Filter_Brand} 
+    Wait Until Element Is Visible  ${Filter_Brand} 
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Brand} 
-    Wait Until Element Is Visible  ${Filter_Brand}  
-    Click Element  ${Filter_Brand}
     Wait Until Element Is Enabled  ${Filter_Brand}  
-    Wait Until Element Is Visible  ${Filter_Select_Brand}  
-    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand}
+    Click Element  ${Filter_Brand}
+    Wait Until Element Is Visible  ${Filter_Select_Brand}
+    Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Select_Brand} 
     Page Should Contain Checkbox  ${Filter_Select_Brand_Checkbox_Input} 
     Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
+    Set Focus To Element  ${Filter_Select_Brand_Checkbox_Input}
     Get Element Attribute  ${Filter_Select_Brand_Checkbox_Input}  checked 
 
 Product Selection
