@@ -33,8 +33,8 @@ Select Seller
     Page Should Contain Checkbox  ${Select_Seller_Checkbox_Input}      
     Set Focus To Element  ${Select_Seller} 
     Click Element  ${Select_Seller}
-    Set Focus To Element  ${Select_Seller_Checkbox_Input} 
     Get Element Attribute  ${Select_Seller_Checkbox_Input}  checked
+
    
 Select Brand
     Wait Until Element Is Visible  ${Filter_Brand} 
@@ -46,7 +46,7 @@ Select Brand
     Page Should Contain Checkbox  ${Filter_Select_Brand_Checkbox_Input} 
     Set Focus To Element  ${Filter_Select_Brand}
     Click Element  ${Filter_Select_Brand}
-    Set Focus To Element  ${Filter_Select_Brand_Checkbox_Input}
+    Set Focus To Element  ${Filter_Select_Brand}
     Get Element Attribute  ${Filter_Select_Brand_Checkbox_Input}  checked 
 
 Product Selection
