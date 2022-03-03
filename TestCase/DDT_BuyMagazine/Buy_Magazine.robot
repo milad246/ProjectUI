@@ -8,8 +8,8 @@ Suite Teardown  Close All Browsers
 Test Template  Buying Magazine
 
 *** Variables ***
-${Internal_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="w-100 lazyloaded" or @alt="مجلات داخلی"]
-${External_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="w-100 ls-is-cached lazyloaded" or @alt="مجلات خارجی"]
+${Internal_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="lazyloaded" or @alt="مجلات داخلی"]
+${External_Magazines}  //div[@class='categoryCard_categoryCard__image__H_Wns']//img[@class="ls-is-cached" or @alt="مجلات خارجی"]
 ${Filter_Cover}  //section[contains(@class,"plpLayout_plplayout__filter__6kcec")]/descendant::*[contains(@class,"text-subtitle-strong") and text()="نوع جلد"]
 ${Filter_Type_Cover}  //section[2]/descendant::*[@class="text-subtitle-strong" and text()="کاغذی"]
 ${Filter_Type_Cover_Checkbox}  //section[2]/descendant::*[@class="text-subtitle-strong" and text()="کاغذی"]/preceding::*[contains(@class,"Checkbox_module_Checkbox__checkbox_Secondary__9c06606f")][1]/../input
@@ -33,7 +33,7 @@ Buying Magazine
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Type_Cover}
     Set Focus To Element  ${Filter_Type_Cover}
     Click Element  ${Filter_Type_Cover}
-    Wait Until Element Is Enabled  ${Filter_Type_Cover}
+    Get Element Attribute  ${Filter_Type_Cover_Checkbox}  checked
     wait until element is visible  ${product}
     Click Image  ${product}
     Switch Window  NEW
