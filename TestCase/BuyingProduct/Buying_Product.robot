@@ -9,7 +9,8 @@ Force Tags  Buying Product
 Suite Setup  Run Keywords  Valid Login  
 # ...         Delete Cart
 ...         Categories And Select Apple Prodocts
-Suite Teardown  Close Browser
+Suite Teardown  Run Keywords  Delete Cart    
+...             Close Browser
 
 *** Test Cases ***
 Verfy Buying product on the Digikala

@@ -2,7 +2,6 @@
 Documentation  A Test suit buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
-Resource  Delete_Product.robot
 
 *** Variables ***
 ${Type_Seller}  //*[text()="نوع فروشنده"]
@@ -33,6 +32,7 @@ Select Seller
     Page Should Contain Checkbox  ${Select_Seller_Checkbox_Input}      
     Set Focus To Element  ${Select_Seller} 
     Click Element  ${Select_Seller}
+    Set Focus To Element  ${Select_Seller}
     Get Element Attribute  ${Select_Seller_Checkbox_Input}  checked
 
    
@@ -73,8 +73,7 @@ Checkout Cart
      Click Element  ${Continue_Btn}
      Wait Until Element Is Enabled  ${Send_Time_Btn} 
 
-Delete Product
-     Delete Cart
+
 
 Buying Products
     Select Seller
@@ -82,4 +81,3 @@ Buying Products
     Product Selection
     Add to cart
     Checkout Cart
-    Delete Product
