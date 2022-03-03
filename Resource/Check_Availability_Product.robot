@@ -34,11 +34,10 @@ Click Let_me_know
   Wait Until Element Is Visible  ${Let_Me_Know}
   Set Focus To Element  ${Send_Message} 
   Click Element  ${Send_Message}
+  Get Element Attribute  ${Send_Email_Checkbox}  checked
   Set Focus To Element  ${Send_Email}
   Click Element  ${Send_Email}
-  Wait Until Element Is Enabled  ${Send_Message}
-  Wait Until Element Is Enabled  ${Send_Email}
-
+  Get Element Attribute  ${Send_Message_Checkbox}  checked
   
 Check Availability
     Move Page
