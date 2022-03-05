@@ -27,7 +27,7 @@ Open Page
 
 Username Page
     wait until element is visible  ${Username_btn}   
-    Mouse Down  ${Input_username}
+    Mouse Down  ${Username_btn}
     Set Focus To Element  ${Input_username}
     Input Text  ${Input_username}  ${username}
     Click Element  ${Username_btn}
