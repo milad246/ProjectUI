@@ -35,7 +35,6 @@ Select Seller
     Set Focus To Element  ${Select_Seller}
     Get Element Attribute  ${Select_Seller_Checkbox_Input}  checked
 
-   
 Select Brand
     Wait Until Element Is Visible  ${Filter_Brand} 
     Run Keyword And Ignore Error  Scroll Element Into View  ${Filter_Brand} 
@@ -72,8 +71,6 @@ Checkout Cart
      Set Focus To Element  ${Continue_Btn}
      Click Element  ${Continue_Btn}
      Wait Until Element Is Enabled  ${Send_Time_Btn} 
-
-
 
 Buying Products
     Select Seller
