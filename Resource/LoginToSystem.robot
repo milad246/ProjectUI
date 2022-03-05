@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  A Test suit to connect to the system
+Documentation  A Test keyword to connect to the system
 Library  SeleniumLibrary
 Resource  Variables.robot
 

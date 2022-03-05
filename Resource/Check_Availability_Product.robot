@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  A Test Kewword buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
 

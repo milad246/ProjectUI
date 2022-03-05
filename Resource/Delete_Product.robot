@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  A Test Keywords Remove the product from the cart
 Library  SeleniumLibrary
 Resource  Variables.robot
 

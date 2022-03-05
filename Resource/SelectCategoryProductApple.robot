@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  A Test suit select product apple on the categories
+Documentation  A Test keyword select product apple on the categories
 Library  SeleniumLibrary
 Resource  Variables.robot
 
