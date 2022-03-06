@@ -2,7 +2,6 @@
 Documentation  A Test suit buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
-Force Tags  New
 
 *** Variables ***
 ${Type_Seller}  //*[text()="نوع فروشنده"]
