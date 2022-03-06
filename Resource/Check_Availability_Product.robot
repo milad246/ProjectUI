@@ -2,7 +2,6 @@
 Documentation  A Test Kewword buying product on the digikala
 Library  SeleniumLibrary
 Resource  Variables.robot
-Force Tags  New
 
 *** Variables ***
 ${Second_Page}  //*[@id="plpLayoutContainer"]/section[1]/div[2]/div[2]/div/div[1] 

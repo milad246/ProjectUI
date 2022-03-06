@@ -4,7 +4,7 @@ Resource  ../../Resource/LoginToSystem.robot
 Resource  ../../Resource/SelectCategoryProductApple.robot
 Resource  ../../Resource/BuyingProduct.robot
 Resource  ../../Resource/Delete_Product.robot
-Force Tags  Delet Product new
+Force Tags  Delet Product 
 Suite Setup  Run Keywords  Valid Login  
 # ...          Categories And Select Apple Prodocts
 # ...          Buying Products         

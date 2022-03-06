@@ -1,7 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  Variables.robot
-Force Tags  New
 
 *** Variables ***
 ${Popup_Categories}  //nav/descendant::span[text()='دسته‌بندی کالاها']

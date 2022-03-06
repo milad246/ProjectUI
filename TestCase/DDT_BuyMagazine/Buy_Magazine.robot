@@ -2,7 +2,7 @@
 Documentation  A Test Suit buying magazin from the category books and stationery
 Library  SeleniumLibrary
 Resource  ../../Resource/Common.robot
-Force Tags  Buying Magazine new
+Force Tags  Buying Magazine 
 Test Setup  Select PopUp Categories And Book Magazine
 Suite Teardown  Close All Browsers
 Test Template  Buying Magazine

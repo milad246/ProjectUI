@@ -2,7 +2,6 @@
 Documentation  A Test keyword to connect to the system
 Library  SeleniumLibrary
 Resource  Variables.robot
-Force Tags  New
 
 *** Variables ***
 ${Login_button}  //*[@data-cro-id="header-profile"]//div[text()="ورود | ثبت‌نام"]

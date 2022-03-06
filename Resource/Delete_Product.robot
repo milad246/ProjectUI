@@ -2,7 +2,6 @@
 Documentation  A Test Keywords Remove the product from the cart
 Library  SeleniumLibrary
 Resource  Variables.robot
-Force Tags  New
 
 *** Variables ***
 ${Cart_Page}  //*[(@class='pos-relative d-inline-flex py-2 pr-2 pl-0 p-2-lg bg-000 radius' or @href="/checkout/cart/") and @data-cro-id="header-cart"]
